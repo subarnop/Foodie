@@ -12,6 +12,7 @@ from flask import request
 from flask import jsonify
 from flask import Flask
 from keras.applications.imagenet_utils import preprocess_input
+from PIL import Image
 
 g = tf.Graph()
 with g.as_default():
@@ -25,15 +26,17 @@ app = Flask(__name__)
 def predict():
     message = request.get_json(force=True)
     img = message['image']
-    '''
-    decoded = base64.b64decode(encoded)
-    #image = Image.open(io.BytesIO(decoded))
-    '''
-    #img = image.load_img(encoded, target_size=(224, 224))
     names = ["Bread", "Dairy product", "Dessert", "Egg", "Fried food", "Meat", "Noodles/Pasta", "Rice", "Seafood", "Soup", "Vegetable/Fruit"]
-    img = image.load_img(img, target_size=(224, 224))
+    #img = image.load_img(img, target_size=(224, 224))
 
-    x = image.img_to_array(img)
+    message = request.get_json(force=True)
+    encoded = message['image']
+    decoded = base64.b64decode(encoded)
+    img = Image.open(io.BytesIO(decoded))
+    if img.mode != "RGB":
+        img = image.convert("RGB")
+    img = img.resize((224,224))
+    x = img_to_array(img)
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
     print(x.shape)
