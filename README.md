@@ -1,8 +1,8 @@
 # Foodie
 
 Foodie is a web app for detection of food/beverages from an image.
-Thousands of people post their food pics on social media daily. Automatic identification of food types from the pictures can be very usefull on many occasions.
-A convolutional neural network is trained over Resnet on a dataset containg 11 categories of food viz. "Bread", "Dairy product", "Dessert", "Egg", "Fried food", "Meat", "Noodles/Pasta", "Rice", "Seafood", "Soup", "Vegetable/Fruit".
+Thousands of people post their food pics on social media daily. Automatic identification of food types from the pictures can be very useful on many occasions.
+A convolutional neural network is trained over Resnet on a dataset containing 11 categories of food viz. "Bread", "Dairy product", "Dessert", "Egg", "Fried food", "Meat", "Noodles/Pasta", "Rice", "Seafood", "Soup", "Vegetable/Fruit".
 A web application environment is setup using flask micro web framework to provide a simple GUI.
 
 ##Usage:
