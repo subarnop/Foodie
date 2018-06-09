@@ -5,7 +5,7 @@ Thousands of people post their food pics on social media daily. Automatic identi
 A convolutional neural network is trained over Resnet on a dataset containing 11 categories of food viz. "Bread", "Dairy product", "Dessert", "Egg", "Fried food", "Meat", "Noodles/Pasta", "Rice", "Seafood", "Soup", "Vegetable/Fruit".
 A web application environment is setup using flask micro web framework to provide a simple GUI.
 
-##Usage:
+## Usage:
 Clone the model.
 Download pretrained weights for Resnet on imagenet dataset.
 Train the model:
@@ -19,5 +19,5 @@ $ flask run --host=0.0.0.0
 ```
 Open http://0.0.0.0:5000/static/predict.html from browser to see the application running on social machine.
 
-##Screenshot view
+## Screenshot view
 ![screenshot](https://github.com/Subarno/Foodie/blob/master/static/Screenshot%20from%202018-06-10%2001-23-46.png)
